@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grand Launching • Asa Jiwa Foundation</title>
+  <!-- Icon & Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <style>
+    :root{
+      --primary:#2c7a7b;   /* teal gelap */
+      --secondary:#319795; /* teal */
+      --accent:#38b2ac;    /* teal muda */
+      --bg:#f6faf9;        /* latar terang */
+      --text:#243b4a;
+      --muted:#6b8696;
+      --card:#ffffff;
+      --shadow:0 10px 30px rgba(28,88,82,.12);
+      --radius:18px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text); background:var(--bg); line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:92%;max-width:1100px;margin:0 auto}
+    .btn{
+      display:inline-flex;align-items:center;gap:.6rem;
+      background:var(--accent); color:#fff; font-weight:700;
+      padding:.9rem 1.2rem; border-radius:999px; box-shadow:var(--shadow);
+      transition:.2s transform ease, .2s opacity ease;
+    }
+    .btn:hover{transform:translateY(-2px);opacity:.95}
+    .btn.ghost{background:#fff;color:var(--primary);border:2px solid var(--accent)}
+    /* Header */
+    header{
+      position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#1f5e60, #2c7a7b);
+      color:#fff; box-shadow:0 4px 20px rgba(0,0,0,.12);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;font-size:1.05rem}
+    .brand i{font-size:1.2rem;color:#e6fffa}
+    .menu{display:flex;gap:1rem;align-items:center}
+    .menu a{padding:.5rem .8rem;border-radius:10px;opacity:.95}
+    .menu a:hover{background:rgba(255,255,255,.12)}
+    .burger{display:none;font-size:1.3rem}
+    @media (max-width:900px){
+      .burger{display:block}
+      .menu{position:fixed;inset:64px 0 auto 0;background:#256f72;padding:1rem 1rem 1.5rem;
+            flex-direction:column;align-items:flex-start;display:none}
+      .menu.show{display:flex}
+    }
+    /* Hero */
+    .hero{
+      background:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.55)),
+        url('https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+      color:#fff; text-align:center; padding:92px 0 84px; box-shadow:var(--shadow);
+    }
+    .hero h1{font-size:2.2rem;letter-spacing:.3px}
+    .tag{display:inline-block;margin:.75rem 0 1.2rem;color:#d7fffb;font-weight:600}
+    /* Sections */
+    section{padding:64px 0}
+    .title{
+      text-align:center;margin-bottom:28px;font-size:1.7rem;
+    }
+    .lead{color:var(--muted);text-align:center;margin:0 auto 22px;max-width:800px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:800px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    @media(min-width:1000px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .bullet{display:flex;gap:12px;margin:10px 0;align-items:flex-start}
+    .bullet i{color:var(--secondary);margin-top:4px}
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;background:#e8faf7;color:#1f5e60;font-weight:700;padding:.35rem .7rem;border-radius:999px}
+    /* Footer */
+    footer{padding:36px 0 56px;text-align:center;color:#51707f}
+    /* WA Float */
+    .wa{
+      position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;
+      display:grid;place-items:center;background:#25D366;color:#fff;font-size:1.4rem;
+      box-shadow:var(--shadow);z-index:60
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand"><i class="fa-solid fa-heart"></i> Asa Jiwa Foundation</div>
+      <nav>
+        <button class="burger" id="burger" aria-label="menu"><i class="fa-solid fa-bars"></i></button>
+        <div class="menu" id="menu">
+          <a href="#pembukaan">Pembukaan</a>
+          <a href="#sambutan">Sambutan</a>
+          <a href="#latar">Latar Belakang</a>
+          <a href="#visi">Visi & Misi</a>
+          <a href="#struktur">Struktur</a>
+          <a href="#program">Program</a>
+          <a href="#ajakan">Ajakan</a>
+          <a href="#webinar">Ucapan Webinar</a>
+          <a href="#penutup">Penutup</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="pill">GRAND LAUNCHING</div>
+      <h1>Asa Jiwa Foundation</h1>
+      <div class="tag">"Merawat Jiwa, Menumbuhkan Asa"</div>
+      <p class="muted" style="color:#e9fffb">Tanggal: <strong>[Isi tanggal launching]</strong> • Platform: <strong>[Zoom/Google Meet]</strong></p>
+    </div>
+  </section>
+  <!-- Pembukaan -->
+  <section id="pembukaan">
+    <div class="container">
+      <h2 class="title">Pembukaan</h2>
+      <p class="lead">
+        Assalamu'alaikum Wr. Wb. Salam sejahtera bagi kita semua. Puji syukur ke hadirat Tuhan Yang Maha Esa, karena
+        pada hari ini kita dapat berkumpul dalam acara <b>Grand Launching Asa Jiwa Foundation (AJF)</b> bertema
+        <i>"Merawat Jiwa, Menumbuhkan Asa."</i> Hari ini menjadi momentum lahirnya ruang aman, edukasi, dan dukungan
+        bagi remaja serta pelajar Indonesia.
+      </p>
+    </div>
+  </section>
+  <!-- Sambutan Ketua Umum -->
+  <section id="sambutan">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h3 style="margin-bottom:.4rem">Sambutan Ketua Umum</h3>
+        <p class="muted">Disampaikan oleh: <b>Ahmad Sopandi</b> — Founder & Ketua Umum AJF</p>
+        <p style="margin-top:.8rem">
+          "Berdirinya AJF berawal dari kepedulian terhadap banyaknya teman sebaya yang mengalami tantangan kesehatan
+          mental. AJF hadir untuk menyediakan <b>ruang aman</b>, <b>edukasi</b>, dan <b>support system</b>. Kami percaya,
+          tidak ada yang perlu berjuang sendirian. Bersama, kita <b>merawat jiwa</b> dan <b>menumbuhkan asa</b>."
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="margin-bottom:.4rem">Tujuan Launching</h3>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p>Memperkenalkan AJF kepada publik.</p></div>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p>Menyampaikan visi, misi, dan program perdana.</p></div>
+        <div class="bullet"><i class="fa-solid fa-check"></i><p>Mengundang kolaborasi sekolah, kampus, dan komunitas.</p></div>
+      </div>
+    </div>
+  </section>
+  <!-- Latar Belakang -->
+  <section id="latar">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h3>Fenomena</h3>
+        <p class="muted">Kesehatan mental remaja & mahasiswa sering diabaikan; banyak yang merasa sendiri.</p>
+      </div>
+      <div class="card">
+        <h3>Solusi AJF</h3>
+        <p class="muted">Wadah edukasi, peer support, dan kampanye positif berbasis online yang inklusif.</p>
+      </div>
+    </div>
+  </section>
+  <!-- Visi Misi -->
+  <section id="visi">
+    <div class="container">
+      <h2 class="title">Visi & Misi</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Visi</h3>
+          <p class="muted">Menjadi komunitas pelopor kesehatan mental berbasis online bagi generasi muda untuk bertumbuh, berdaya, dan berkontribusi.</p>
+        </div>
+        <div class="card">
+          <h3>Misi</h3>
+          <div class="bullet"><i class="fa-solid fa-leaf"></i><p>Edukasi & literasi kesehatan mental berkelanjutan.</p></div>
+          <div class="bullet"><i class="fa-solid fa-hand-holding-heart"></i><p>Membangun ruang aman dan peer support.</p></div>
+          <div class="bullet"><i class="fa-solid fa-people-group"></i><p>Kolaborasi lintas komunitas, sekolah & kampus.</p></div>
+          <div class="bullet"><i class="fa-solid fa-lightbulb"></i><p>Program kreatif & relevan bagi anak muda.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Struktur Sementara -->
+  <section id="struktur">
+    <div class="container">
+      <h2 class="title">Struktur Organisasi (Sementara)</h2>
+      <div class="card">
+        <p><b>Ketua Umum:</b> Ahmad Sopandi</p>
+        <p class="muted" style="margin-top:.4rem">
+          Pengurus lain: <i>Dalam proses rekrutmen (Kabinet Lentera Jiwa/ A¹).</i><br/>
+          Struktur lengkap akan diumumkan setelah seleksi.
+        </p>
+        <div style="margin-top:1rem" class="cta">
+          <a class="btn" href="bit.ly/asajiwafoundation" target="_blank"><i class="fa-solid fa-user-plus"></i> Daftar Pengurus/Anggota</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Program Utama -->
+  <section id="program">
+    <div class="container">
+      <h2 class="title">Program Utama AJF</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3><i class="fa-solid fa-podcast"></i> Webinar & Seminar</h3>
+          <p class="muted">Menghadirkan profesional, akademisi, dan praktisi terkait isu kesehatan mental.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-comments"></i> Ruang Cerita (Peer Support)</h3>
+          <p class="muted">Sesi berbagi online yang aman dan empatik untuk pelajar/mahasiswa.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-hashtag"></i> Kampanye Digital</h3>
+          <p class="muted">Konten edukatif di Instagram & media sosial AJF.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fa-solid fa-handshake"></i> Kolaborasi Komunitas</h3>
+          <p class="muted">Sinergi dengan sekolah, kampus, dan komunitas untuk dampak lebih luas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ajakan Bergabung -->
+  <section id="ajakan">
+    <div class="container">
+      <h2 class="title">Ajakan Bergabung</h2>
+      <p class="lead">
+        Kami membuka kesempatan untuk <b>Angkatan Pertama</b> bergabung sebagai Pengurus maupun Anggota AJF.
+        Mari belajar, tumbuh, dan berkarya membawa dampak positif bagi masyarakat.
+      </p>
+      <div class="cta" style="margin-top:8px">
+        <a class="btn" href="bit.ly/asajiwafoundation" target="_blank"><i class="fa-solid fa-pen-to-square"></i> Isi Formulir</a>
+        <a class="btn ghost" href="https://instagram.com/asajiwa.id" target="_blank"><i class="fa-brands fa-instagram"></i> Follow Instagram</a>
+      </div>
+    </div>
+  </section>
+  <!-- Ucapan Webinar Nasional -->
+  <section id="webinar" style="background:#e7fbf8">
+    <div class="container">
+      <h2 class="title">Ucapan Selamat Webinar Nasional</h2>
+      <div class="card" style="background:#fff">
+        <p>
+          Kepada seluruh peserta, kami ucapkan: <b>"Selamat mengikuti Webinar Nasional Asa Jiwa Foundation."</b>
+          Semoga ilmu hari ini bermanfaat, membuka wawasan baru, dan menjadi langkah awal untuk lebih peduli
+          terhadap kesehatan mental. Ikuti rangkaian hingga akhir—akan ada sesi tanya jawab, pengumuman penting,
+          dan informasi pendaftaran pengurus/anggota AJF.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Penutup -->
+  <section id="penutup">
+    <div class="container grid cols-2">
+      <div class="card">
+        <h3>Penutup</h3>
+        <p class="muted">
+          Terima kasih kepada semua pihak yang mendukung terselenggaranya launching ini. Mari akhiri dengan
+          tagline kita:
+        </p>
+        <p style="font-weight:800;margin-top:.5rem;font-size:1.05rem">
+          "Merawat Jiwa, Menumbuhkan Asa."
+        </p>
+        <p class="muted" style="margin-top:.8rem">Wassalamu'alaikum Wr. Wb. • Salam sejahtera untuk kita semua.</p>
+      </div>
+      <div class="card">
+        <h3>Kontak & Media Sosial</h3>
+        <div class="bullet"><i class="fa-solid fa-envelope"></i><p>asajiwafoundation@gmail.com</p></div>
+        <div class="bullet"><i class="fa-brands fa-instagram"></i><p>Instagram: <a href="https://instagram.com/asajiwa.id" target="_blank">@ [username-IG-AJF]</a></p></div>
+        <div class="bullet"><i class="fa-solid fa-globe"></i><p>Website Utama: <a href="https://asajiwafoundation-hub" target="_blank">[domain-utama-ajf]</a></p></div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Asa Jiwa Foundation • All rights reserved</div>
+    </div>
+  </footer>
+  <!-- WhatsApp Floating -->
+  <a class="wa" href="https://wa.me/6282228575526" target="_blank" aria-label="WhatsApp AJF">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <script>
+    // tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // burger menu
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('menu');
+    burger?.addEventListener('click', ()=> menu.classList.toggle('show'));
+  </script>
+</body>
+</html>
